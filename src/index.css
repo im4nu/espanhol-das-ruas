@@ -191,6 +191,12 @@
     text-transform: uppercase;
   }
 
+  .eor-dots {
+    position: relative;
+    width: 118px;
+    height: 30px;
+  }
+
   .eor-dot {
     position: absolute;
     top: 0;
@@ -198,7 +204,26 @@
     height: 30px;
     border-radius: 50%;
     border: 2px solid var(--preto-asfalto);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .eor-dot--initial {
     background: linear-gradient(135deg, var(--roxo-noturno), var(--vermelho-rubi));
+    font-family: var(--fonte-display);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--off-white);
+    line-height: 1;
+  }
+
+  .eor-dot--photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .discord-banner {
