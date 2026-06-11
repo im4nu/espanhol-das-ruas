@@ -16,7 +16,7 @@ export function Hero() {
     >
       <img
         src="/assets/simbolo.svg"
-        alt="Espanhol das Ruas"
+        alt="Símbolo Ñ — Espanhol das Ruas"
         className="eor-poster-symbol hero-reveal hero-reveal--poster pointer-events-none absolute right-[-130px] top-[54%] z-[1] hidden h-[72vh] md:block"
         style={{
           filter: 'drop-shadow(0 0 60px rgba(187,15,45,0.4))',

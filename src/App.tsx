@@ -17,7 +17,9 @@ export default function App() {
 
       {!showSplash && (
         <>
-          <Nav />
+          <header>
+            <Nav />
+          </header>
           <main>
             <Hero />
             <ComoFunciona />

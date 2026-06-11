@@ -13,7 +13,7 @@ const pillars = [
     iconClass: 'text-dourado-sutil',
     title: 'Comunidade ativa',
     description:
-      '811 membros conversando em espanhol no Discord — exercícios, dúvidas e cultura do dia a dia.',
+      'Mais de 300 mensagens por dia no Discord — exercícios, dúvidas e cultura do dia a dia.',
   },
   {
     icon: '▲',

@@ -13,7 +13,7 @@ function htmlSiteUrl(siteUrl: string): Plugin {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '')
-  const siteUrl = (env.VITE_SITE_URL ?? '').replace(/\/$/, '')
+  const siteUrl = (env.VITE_SITE_URL ?? 'https://espanholdasruas.com').replace(/\/$/, '')
 
   return {
     plugins: [react(), tailwindcss(), htmlSiteUrl(siteUrl)],

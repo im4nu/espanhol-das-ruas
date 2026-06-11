@@ -8,7 +8,7 @@ export function Logo({ symbolHeight = 44, className = '' }: LogoProps) {
     <div className={`flex items-center gap-3 ${className}`.trim()}>
       <img
         src="/assets/simbolo.svg"
-        alt=""
+        alt="Símbolo Ñ — Espanhol das Ruas"
         height={symbolHeight}
         className="block h-auto w-auto"
         style={{ height: symbolHeight }}
