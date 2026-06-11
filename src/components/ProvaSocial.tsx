@@ -1,20 +1,21 @@
 import { Eyebrow } from './ui/Eyebrow'
+import { PREPLY_REVIEWS_URL } from '../lib/constants'
 
 const testimonials = [
   {
     quote:
-      'Travei 3 anos no Duolingo. Aqui falei espanhol de verdade na primeira semana.',
-    author: 'Lucas M., São Paulo',
+      'Se liga, eu tava precisando aprender o idioma rapidamente pra uma vaga e ele estudou jargões da área e trouxe logo na nossa primeira aula. A metologia é adequada ao cliente então se você precisar de algo mais técnico, acadêmico, corporativo ou cotidiano é só alinhar com ele. Super recomendo!',
+    author: 'Emmanuel R.',
   },
   {
     quote:
-      'A sala ao vivo muda tudo. Você aprende errando, sem vergonha, com gente legal.',
-    author: 'Fernanda R., Belo Horizonte',
+      'Ótimo professor! As aulas são bem focadas na conversação, o que ajuda muito a destravar a fala e ganhar confiança no espanhol.',
+    author: 'Guilherme',
   },
   {
     quote:
-      'Pensei que seria igual a curso normal. Não é. O método é prático e direto ao ponto.',
-    author: 'Rodrigo T., Porto Alegre',
+      'Aula muito dinamica e divertida, gosto do foco em pratica de conversação.',
+    author: 'Ramon',
   },
 ]
 
@@ -38,6 +39,30 @@ export function ProvaSocial() {
             </article>
           ))}
         </div>
+
+        <p
+          className="mt-10 text-center text-[13px] text-texto-fraco"
+          style={{ fontFamily: 'var(--fonte-mono)', letterSpacing: '0.06em' }}
+        >
+          Depoimentos de alunos via{' '}
+          <a
+            href={PREPLY_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-dourado-sutil underline decoration-dourado-sutil/40 underline-offset-[3px] transition-colors duration-150 hover:text-off-white hover:decoration-off-white/50"
+          >
+            Preply
+          </a>
+          {' '}—{' '}
+          <a
+            href={PREPLY_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-texto-medio underline decoration-linha-sutil underline-offset-[3px] transition-colors duration-150 hover:text-off-white"
+          >
+            consultar mais avaliações
+          </a>
+        </p>
       </div>
     </section>
   )
