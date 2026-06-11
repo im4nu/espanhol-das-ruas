@@ -1,0 +1,31 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espanhol das Ruas">
+  
+  <circle cx="300" cy="300" r="194" fill="#BB0F2D"></circle>
+
+  
+  <g fill="#D4B46A" stroke="#D4B46A" stroke-width="13" stroke-linejoin="round">
+    <rect x="100" y="524" width="400" height="42" rx="3"></rect>
+    <rect x="96" y="360" width="34" height="164"></rect>
+    <rect x="142" y="300" width="36" height="224"></rect>
+    <rect x="470" y="360" width="34" height="164"></rect>
+    <rect x="422" y="300" width="36" height="224"></rect>
+    <rect x="196" y="196" width="58" height="328"></rect>
+    <rect x="346" y="196" width="58" height="328"></rect>
+    <polygon points="248,196 324,196 404,524 330,524"></polygon>
+  </g>
+
+  
+  <g fill="#7B2CFF">
+    <rect x="96" y="360" width="34" height="164"></rect>
+    <rect x="142" y="300" width="36" height="224"></rect>
+    <rect x="470" y="360" width="34" height="164"></rect>
+    <rect x="422" y="300" width="36" height="224"></rect>
+    <rect x="196" y="196" width="58" height="328"></rect>
+    <rect x="346" y="196" width="58" height="328"></rect>
+    <polygon points="248,196 324,196 404,524 330,524"></polygon>
+    <rect x="100" y="524" width="400" height="42" rx="3"></rect>
+  </g>
+
+  
+  <polygon points="216,162 280,120 336,152 384,124 384,150 336,178 280,146 216,188" fill="#7B2CFF" stroke="#D4B46A" stroke-width="13" stroke-linejoin="round"></polygon>
+</svg>

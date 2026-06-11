@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1920 380" xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="xMidYMax slice" stroke="#7B2CFF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+  <g stroke-width="1.6" opacity="0.55">
+    <path d="M40,380 V250 H92 V210 H120 V380"></path>
+    <path d="M150,380 V230 H210 V200 H236 V380"></path>
+    <path d="M520,380 V275 H560 V255 H596 V380"></path>
+    <path d="M980,380 V268 H1024 V300 H1060 V380"></path>
+    <path d="M1420,380 V245 H1470 V210 H1500 V380"></path>
+    <path d="M1700,380 V285 H1748 V255 H1784 V380"></path>
+  </g>
+  <path d="M250,380 V150 H262 V120 H300 V150 H312 V380 Z"></path>
+  <path d="M276,120 V92 H286 V72 L291,60 L296,72 V92 H306"></path>
+  <path d="M262,150 H300 M268,200 H306 M268,260 H306 M268,320 H306"></path>
+  <path d="M360,380 V210 H372 V180 H388 V150 H430 V180 H446 V210 H458 V380 Z"></path>
+  <path d="M404,150 V120 H414 V150"></path>
+  <path d="M372,250 H446 M372,310 H446"></path>
+  <path d="M620,380 V200 H700 V380 Z"></path>
+  <path d="M634,200 L660,150 L686,200 M646,160 L660,120 L674,160 M660,120 V86"></path>
+  <path d="M620,250 H700 M620,300 H700"></path>
+  <path d="M740,380 V180 H760 V150 H850 V180 H870 V380 Z"></path>
+  <path d="M790,150 V118 H820 V150"></path>
+  <path d="M760,230 H850 M760,290 H850 M805,180 V370"></path>
+  <path d="M1120,380 V160 H1140 V130 H1152 V100 H1162 V130 H1174 V160 H1194 V380 Z"></path>
+  <path d="M1120,240 H1194 M1120,310 H1194"></path>
+  <path d="M1230,380 V190 H1246 V160 H1262 V130 H1330 V160 H1346 V190 H1362 V380 Z"></path>
+  <path d="M1288,130 V96 H1304 V130"></path>
+  <path d="M1246,260 H1362 M1246,330 H1362 M1296,190 V370"></path>
+  <path d="M1540,380 V150 H1552 V120 H1590 V150 H1602 V380 Z"></path>
+  <path d="M1566,120 V92 H1576 V72 L1581,60 L1586,72 V92 H1596"></path>
+  <path d="M1552,150 H1590 M1558,210 H1596 M1558,270 H1596 M1558,330 H1596"></path>
+  <path d="M1820,380 V200 H1834 V170 H1880 V200 H1894 V380 Z"></path>
+  <path d="M1850,170 V140 H1864 V170"></path>
+  <path d="M1834,260 H1880 M1834,320 H1880"></path>
+</svg>

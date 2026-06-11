@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210" fill="none" preserveAspectRatio="none" aria-hidden="true">
+  <rect width="1440" height="210" fill="#0B0B0F"/>
+  <!-- Wireframe skyline roxo -->
+  <g stroke="#7B2CFF" stroke-width="1.2" opacity="0.55">
+    <path d="M0 210V120h40v90h30V80h50v130h25V100h35v110h20V60h45v150h30V90h40v120h35V70h55v140h25V110h30v100h40V85h50v125h20V130h60v80h35V95h45v115h30V75h40v135h25V105h55v105h30V88h38v122h42V115h48v95h36V72h52v138h28V98h44v112h32V140h58v70h40V82h46v128h34V108h50v102"/>
+  </g>
+  <g stroke="#D4B46A" stroke-width="0.8" opacity="0.35">
+    <line x1="0" y1="180" x2="1440" y2="180"/>
+    <line x1="0" y1="150" x2="1440" y2="150"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" fill="none" aria-hidden="true">
+  <!-- Lua rubi -->
+  <circle cx="248" cy="72" r="38" fill="#BB0F2D"/>
+  <circle cx="258" cy="64" r="32" fill="#0B0B0F"/>
+
+  <!-- Ñ  torres Art Déco -->
+  <path d="M48 380V140h36l28 88 28-88h36v240" stroke="#D4B46A" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <path d="M48 140h108" stroke="#D4B46A" stroke-width="3"/>
+
+  <!-- Corpo roxo -->
+  <path d="M56 372V148h28l24 76 24-76h28v224" fill="#7B2CFF" opacity="0.85"/>
+  <rect x="56" y="148" width="92" height="8" fill="#7B2CFF"/>
+
+  <!-- Degraus déco -->
+  <rect x="72" y="200" width="60" height="6" fill="#D4B46A" opacity="0.6"/>
+  <rect x="80" y="230" width="44" height="6" fill="#D4B46A" opacity="0.6"/>
+  <rect x="88" y="260" width="28" height="6" fill="#D4B46A" opacity="0.6"/>
+
+  <!-- Base monolítica -->
+  <rect x="40" y="372" width="120" height="16" fill="#131019" stroke="#D4B46A" stroke-width="2"/>
+</svg>

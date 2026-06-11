@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System — Espanhol das Ruas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--preto-asfalto);color:var(--off-white);font-family:var(--fonte-corpo);
+    -webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 40px;}
+
+  /* eyebrow override sizing */
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:20px;height:2px;background:var(--dourado-sutil);}
+
+  /* section scaffolding */
+  .sec{padding:84px 0;border-top:1px solid var(--linha-sutil);}
+  .sec__head{display:flex;align-items:baseline;gap:18px;margin-bottom:44px;flex-wrap:wrap;}
+  .sec__num{font-family:var(--fonte-mono);font-size:14px;color:var(--dourado-sutil);}
+  .sec__title{font-family:var(--fonte-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;
+    font-size:40px;margin:0;line-height:1;}
+  .sec__desc{color:var(--texto-medio);max-width:560px;font-size:16px;line-height:1.55;}
+
+  /* HERO of doc */
+  .doc-hero{position:relative;overflow:hidden;padding:96px 0 84px;
+    background:radial-gradient(90% 120% at 50% -20%, rgba(123,44,255,.16), transparent 55%),var(--preto-asfalto);}
+  .doc-hero .wrap{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px;}
+  .doc-hero img{height:150px;filter:drop-shadow(0 0 34px rgba(187,15,45,.35));}
+  .doc-hero h1{font-family:var(--fonte-display);font-weight:900;text-transform:uppercase;font-size:64px;margin:0;line-height:.9;}
+  .doc-hero .tagline{font-family:var(--fonte-mono);letter-spacing:.34em;font-size:14px;color:var(--dourado-sutil);text-transform:uppercase;}
+  .doc-hero .sub{color:var(--texto-medio);max-width:600px;font-size:18px;line-height:1.55;}
+  .doc-skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:160px;opacity:.5;z-index:1;pointer-events:none;}
+
+  /* LOGO grids */
+  .logo-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;}
+  .panel{border:1px solid var(--linha-sutil);border-radius:var(--raio-lg);background:var(--superficie-1);
+    padding:40px;display:flex;align-items:center;justify-content:center;min-height:260px;position:relative;}
+  .panel--light{background:var(--off-white);}
+  .panel__cap{position:absolute;top:14px;left:16px;font-family:var(--fonte-mono);font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--texto-fraco);}
+  .panel--light .panel__cap{color:rgba(11,11,15,.5);}
+  .lockup{display:flex;align-items:center;gap:18px;}
+  .lockup img{height:96px;}
+  .lockup__word{font-family:var(--fonte-display);font-weight:800;line-height:.9;letter-spacing:.02em;}
+  .lockup__word .l1{font-size:34px;}
+  .lockup__word .l2{font-size:34px;display:flex;gap:10px;}
+  .mono-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+
+  .dos{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px;}
+  .do-card{border:1px solid var(--linha-sutil);border-radius:var(--raio-md);background:var(--superficie-1);
+    padding:18px;display:flex;flex-direction:column;gap:12px;min-height:150px;}
+  .do-badge{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:15px;font-weight:700;}
+  .do-ok{background:rgba(31,138,91,.15);color:#48c98a;border:1px solid rgba(72,201,138,.5);}
+  .do-no{background:rgba(187,15,45,.15);color:#e0556e;border:1px solid rgba(224,85,110,.5);}
+  .do-card p{margin:0;font-size:13px;color:var(--texto-medio);line-height:1.45;}
+
+  /* COLORS */
+  .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .sw{border:1px solid var(--linha-sutil);border-radius:var(--raio-lg);overflow:hidden;background:var(--superficie-1);}
+  .sw__chip{height:130px;}
+  .sw__body{padding:16px 16px 20px;}
+  .sw__name{font-family:var(--fonte-display);font-weight:700;text-transform:uppercase;font-size:18px;letter-spacing:.02em;}
+  .sw__hex{font-family:var(--fonte-mono);font-size:13px;color:var(--dourado-sutil);margin:4px 0 10px;}
+  .sw__role{font-size:13px;color:var(--texto-medio);line-height:1.45;}
+
+  /* TYPE */
+  .type-block{border:1px solid var(--linha-sutil);border-radius:var(--raio-lg);background:var(--superficie-1);padding:30px 34px;margin-bottom:20px;}
+  .type-meta{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
+  .type-name{font-family:var(--fonte-display);font-weight:700;text-transform:uppercase;font-size:22px;}
+  .type-use{font-family:var(--fonte-mono);font-size:12px;color:var(--texto-fraco);letter-spacing:.08em;text-transform:uppercase;}
+  .spec-display{font-family:var(--fonte-display);font-weight:800;text-transform:uppercase;font-size:64px;line-height:.92;}
+  .spec-body{font-family:var(--fonte-corpo);font-size:22px;line-height:1.5;color:var(--texto-medio);}
+  .spec-mono{font-family:var(--fonte-mono);font-size:18px;letter-spacing:.06em;color:var(--dourado-sutil);}
+  .scale-row{display:flex;align-items:baseline;gap:20px;padding:12px 0;border-top:1px dashed var(--linha-sutil);}
+  .scale-row span:first-child{font-family:var(--fonte-mono);font-size:12px;color:var(--texto-fraco);width:120px;flex:none;}
+
+  /* COMPONENTS */
+  .comp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .comp-card{border:1px solid var(--linha-sutil);border-radius:var(--raio-lg);background:var(--superficie-1);padding:30px;}
+  .comp-card h4{font-family:var(--fonte-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-fraco);margin:0 0 22px;}
+  .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn{font-family:var(--fonte-display);font-weight:700;text-transform:uppercase;letter-spacing:.045em;
+    font-size:17px;padding:13px 24px;border-radius:4px;cursor:pointer;border:1px solid transparent;transition:.18s;line-height:1;white-space:nowrap;}
+  .btn--sm{font-size:14px;padding:10px 16px;}
+  .btn--primary{background:var(--roxo-noturno);color:var(--off-white);border-color:var(--dourado-sutil);}
+  .btn--primary:hover{background:#8d45ff;box-shadow:0 10px 30px -10px var(--halo-roxo);}
+  .btn--ghost{background:transparent;color:var(--off-white);border-color:var(--linha-dourada);}
+  .btn--ghost:hover{border-color:var(--dourado-sutil);color:var(--dourado-sutil);}
+  .btn--rubi{background:var(--vermelho-rubi);color:var(--off-white);border-color:transparent;}
+  .chip{font-family:var(--fonte-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    border:1px solid var(--linha-dourada);color:var(--dourado-sutil);padding:7px 12px;border-radius:var(--raio-pill);}
+  .demo-card{border:1px solid var(--linha-sutil);border-radius:var(--raio-md);padding:22px;background:var(--superficie-2);}
+  .demo-card .k{font-family:var(--fonte-display);font-weight:700;text-transform:uppercase;font-size:24px;}
+  .demo-card .v{color:var(--texto-medio);font-size:14px;margin-top:6px;line-height:1.5;}
+
+  footer{padding:54px 0 70px;border-top:1px solid var(--linha-sutil);text-align:center;}
+  footer .tagline{font-family:var(--fonte-mono);letter-spacing:.34em;font-size:13px;color:var(--dourado-sutil);text-transform:uppercase;}
+
+  @media (max-width:880px){
+    .logo-grid,.mono-row,.comp-grid{grid-template-columns:1fr;}
+    .swatches,.dos{grid-template-columns:repeat(2,1fr);}
+    .doc-hero h1{font-size:44px;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== DOC HERO ===== -->
+  <header class="doc-hero">
+    <div class="wrap">
+      <img src="assets/logo/simbolo.svg" alt="Símbolo Espanhol das Ruas">
+      <h1>Espanhol das Ruas</h1>
+      <div class="tagline">Simples · Icônico · Sombrio · Urbano</div>
+      <p class="sub">Design System da comunidade de espanhol para brasileiros. Inspiração em animação clássica e Art Déco noturno — a cidade como pano de fundo, a Ñ como monumento.</p>
+    </div>
+    <img class="doc-skyline" src="assets/skyline.svg" alt="">
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===== LOGO ===== -->
+    <section class="sec" id="logo">
+      <div class="sec__head">
+        <span class="sec__num">01</span>
+        <h2 class="sec__title">Logo</h2>
+        <p class="sec__desc">A Ñ é um arranha-céu: torres-degrau Art Déco, contorno dourado, base monolítica e a lua rubi atrás. Funciona como lockup completo ou como símbolo isolado.</p>
+      </div>
+
+      <div class="logo-grid">
+        <div class="panel">
+          <span class="panel__cap">Lockup principal</span>
+          <div class="lockup">
+            <img src="assets/logo/simbolo.svg" alt="Espanhol das Ruas">
+            <div class="lockup__word">
+              <div class="l1">ESPANHOL</div>
+              <div class="l2"><span style="color:var(--texto-roxo)">DAS</span><span style="color:var(--vermelho-rubi)">RUAS</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel__cap">Símbolo</span>
+          <img src="assets/logo/simbolo.svg" alt="Símbolo" style="height:180px">
+        </div>
+      </div>
+
+      <div class="mono-row" style="margin-top:24px">
+        <div class="panel">
+          <span class="panel__cap">Mono · fundo escuro</span>
+          <img src="assets/logo/simbolo-mono-offwhite.svg" alt="Mono claro" style="height:150px">
+        </div>
+        <div class="panel panel--light">
+          <span class="panel__cap">Mono · fundo claro</span>
+          <img src="assets/logo/simbolo-mono-preto.svg" alt="Mono escuro" style="height:150px">
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--fonte-display);text-transform:uppercase;letter-spacing:.04em;font-size:18px;margin:46px 0 4px;color:var(--dourado-sutil)">Mini guia de uso</h3>
+      <div class="dos">
+        <div class="do-card"><div class="do-badge do-ok">✓</div><p>Use contraste suficiente para garantir a legibilidade.</p></div>
+        <div class="do-card"><div class="do-badge do-ok">✓</div><p>O símbolo funciona sozinho em aplicações pequenas (avatar, favicon).</p></div>
+        <div class="do-card"><div class="do-badge do-ok">✓</div><p>Respeite a paleta de cores oficial.</p></div>
+        <div class="do-card"><div class="do-badge do-no">✕</div><p>Não distorcer nem alterar as proporções.</p></div>
+        <div class="do-card"><div class="do-badge do-no">✕</div><p>Não aplicar gradientes, sombras ou efeitos sobre o símbolo.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== CORES ===== -->
+    <section class="sec" id="cores">
+      <div class="sec__head">
+        <span class="sec__num">02</span>
+        <h2 class="sec__title">Paleta</h2>
+        <p class="sec__desc">Base preta de asfalto, roxo noturno como cor de ação, rubi como energia e a "lua", dourado nos detalhes finos. Off-white para texto. Sem gradientes na marca.</p>
+      </div>
+      <div class="swatches">
+        <div class="sw"><div class="sw__chip" style="background:#0B0B0F;border-bottom:1px solid var(--linha-sutil)"></div><div class="sw__body"><div class="sw__name">Preto Asfalto</div><div class="sw__hex">#0B0B0F</div><div class="sw__role">Fundo base de toda a marca.</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:#7B2CFF"></div><div class="sw__body"><div class="sw__name">Roxo Noturno</div><div class="sw__hex">#7B2CFF</div><div class="sw__role">Cor primária: ações, botões, destaque.</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:#BB0F2D"></div><div class="sw__body"><div class="sw__name">Vermelho Rubi</div><div class="sw__hex">#BB0F2D</div><div class="sw__role">Energia, acentos e a lua do símbolo.</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:#D4B46A"></div><div class="sw__body"><div class="sw__name">Dourado Sutil</div><div class="sw__hex">#D4B46A</div><div class="sw__role">Contornos finos, linhas e detalhes déco.</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:#F2F2F2"></div><div class="sw__body"><div class="sw__name">Off-White</div><div class="sw__hex">#F2F2F2</div><div class="sw__role">Texto e elementos sobre fundo escuro.</div></div></div>
+      </div>
+    </section>
+
+    <!-- ===== TIPOGRAFIA ===== -->
+    <section class="sec" id="tipo">
+      <div class="sec__head">
+        <span class="sec__num">03</span>
+        <h2 class="sec__title">Tipografia</h2>
+        <p class="sec__desc">Display condensado de cartaz para títulos, grotesca limpa para leitura e mono para rótulos e detalhes de "rua". Tudo no Google Fonts.</p>
+      </div>
+
+      <div class="type-block">
+        <div class="type-meta"><div class="type-name">Big Shoulders Display</div><div class="type-use">Títulos · CTAs · números · 700–900</div></div>
+        <div class="spec-display">De zero a hablante</div>
+      </div>
+      <div class="type-block">
+        <div class="type-meta"><div class="type-name">Archivo</div><div class="type-use">Corpo · interface · 400–600</div></div>
+        <div class="spec-body">O espanhol de verdade — na rua, no trampo e na viagem. Texto pensado para leitura confortável em telas, sem cara de apostila.</div>
+      </div>
+      <div class="type-block">
+        <div class="type-meta"><div class="type-name">Space Mono</div><div class="type-use">Eyebrows · tags · detalhes · 400–700</div></div>
+        <div class="spec-mono">COMUNIDADE · DISCORD · DO ZERO À FLUÊNCIA</div>
+      </div>
+
+      <div class="type-block">
+        <div class="type-meta"><div class="type-name">Escala</div><div class="type-use">clamp() responsivo</div></div>
+        <div class="scale-row"><span>Display</span><span style="font-family:var(--fonte-display);font-weight:800;text-transform:uppercase;font-size:48px;line-height:1">Aa</span><span style="color:var(--texto-fraco);font-family:var(--fonte-mono);font-size:12px">3–6.5rem</span></div>
+        <div class="scale-row"><span>H1 / H2</span><span style="font-family:var(--fonte-display);font-weight:700;text-transform:uppercase;font-size:32px;line-height:1">Aa</span><span style="color:var(--texto-fraco);font-family:var(--fonte-mono);font-size:12px">1.8–4rem</span></div>
+        <div class="scale-row"><span>Corpo</span><span style="font-family:var(--fonte-corpo);font-size:18px">Aa</span><span style="color:var(--texto-fraco);font-family:var(--fonte-mono);font-size:12px">1.06rem · line-height 1.5</span></div>
+        <div class="scale-row"><span>Label / mono</span><span style="font-family:var(--fonte-mono);font-size:14px;letter-spacing:.18em">AA</span><span style="color:var(--texto-fraco);font-family:var(--fonte-mono);font-size:12px">0.81rem · tracking .22em</span></div>
+      </div>
+    </section>
+
+    <!-- ===== COMPONENTES ===== -->
+    <section class="sec" id="comp">
+      <div class="sec__head">
+        <span class="sec__num">04</span>
+        <h2 class="sec__title">Componentes</h2>
+        <p class="sec__desc">Blocos base para a landing. Botão primário sempre com o contorno dourado fino — a assinatura déco da marca.</p>
+      </div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <h4>Botões</h4>
+          <div class="row" style="margin-bottom:16px">
+            <button class="btn btn--primary">Entrar na comunidade</button>
+            <button class="btn btn--ghost">Ver como funciona →</button>
+          </div>
+          <div class="row">
+            <button class="btn btn--rubi btn--sm">Garantir acesso</button>
+            <button class="btn btn--primary btn--sm">Entrar</button>
+          </div>
+        </div>
+        <div class="comp-card">
+          <h4>Rótulos / Eyebrow</h4>
+          <div class="row" style="margin-bottom:18px">
+            <span class="eyebrow" style="color:var(--dourado-sutil)">Comunidade no Discord</span>
+          </div>
+          <div class="row">
+            <span class="chip">Nível 1</span><span class="chip">Conversação</span><span class="chip">Cultura</span>
+          </div>
+        </div>
+        <div class="comp-card">
+          <h4>Card de destaque</h4>
+          <div class="demo-card">
+            <div class="k">Sala ao vivo</div>
+            <div class="v">Treino de conversação toda semana, com correção na hora e gente que fala de verdade.</div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <h4>Linhas & molduras déco</h4>
+          <div style="position:relative;border:1px solid var(--linha-dourada);border-radius:6px;height:120px;display:grid;place-items:center;color:var(--texto-medio);font-family:var(--fonte-mono);font-size:12px;letter-spacing:.14em">
+            MOLDURA DOURADA + CANTOS
+            <span style="position:absolute;top:8px;left:8px;width:16px;height:16px;border-top:2px solid var(--dourado-sutil);border-left:2px solid var(--dourado-sutil)"></span>
+            <span style="position:absolute;top:8px;right:8px;width:16px;height:16px;border-top:2px solid var(--dourado-sutil);border-right:2px solid var(--dourado-sutil)"></span>
+            <span style="position:absolute;bottom:8px;left:8px;width:16px;height:16px;border-bottom:2px solid var(--dourado-sutil);border-left:2px solid var(--dourado-sutil)"></span>
+            <span style="position:absolute;bottom:8px;right:8px;width:16px;height:16px;border-bottom:2px solid var(--dourado-sutil);border-right:2px solid var(--dourado-sutil)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="tagline">Simples · Icônico · Sombrio · Urbano</div>
+    </div>
+  </footer>
+
+</body>
+</html>

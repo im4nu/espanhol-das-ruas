@@ -1,0 +1,90 @@
+/* ==========================================================================
+   ESPANHOL DAS RUAS — Design Tokens
+   Vibe: Art Déco noir / urbano / animação clássica. Simples. Icônico. Sombrio.
+   Importe as fontes no <head>:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+   ========================================================================== */
+
+:root {
+  /* ---- Marca (oficiais) ---- */
+  --preto-asfalto:  #0B0B0F;
+  --roxo-noturno:   #7B2CFF;
+  --vermelho-rubi:  #BB0F2D;
+  --dourado-sutil:  #D4B46A;
+  --off-white:      #F2F2F2;
+
+  /* ---- Superfícies (derivadas, base preta com leve tom roxo) ---- */
+  --superficie-0:   #0B0B0F;  /* fundo principal */
+  --superficie-1:   #131019;  /* cards / seções */
+  --superficie-2:   #1B1626;  /* cards elevados / hover */
+  --superficie-lua: #2A0A12;  /* fundo avermelhado escuro p/ blocos de destaque */
+
+  /* ---- Texto ---- */
+  --texto-forte:    #F2F2F2;
+  --texto-medio:    rgba(242,242,242,0.72);
+  --texto-fraco:    rgba(242,242,242,0.50);
+  --texto-roxo:     #A875FF;  /* roxo clareado p/ leitura sobre preto */
+
+  /* ---- Linhas / bordas ---- */
+  --linha-dourada:  rgba(212,180,106,0.45);
+  --linha-sutil:    rgba(242,242,242,0.12);
+  --linha-roxa:     rgba(123,44,255,0.45);
+
+  /* ---- Acento de seleção / brilho ---- */
+  --halo-roxo:      rgba(123,44,255,0.35);
+  --halo-rubi:      rgba(187,15,45,0.35);
+
+  /* ---- Tipografia ---- */
+  --fonte-display:  'Big Shoulders Display', 'Impact', 'Haettenschweiler', 'Arial Narrow', sans-serif;
+  --fonte-corpo:    'Archivo', system-ui, sans-serif;
+  --fonte-mono:     'Space Mono', ui-monospace, monospace;
+
+  /* Escala tipográfica (clamp p/ responsivo) */
+  --t-display:  clamp(3rem, 8vw, 6.5rem);   /* hero */
+  --t-h1:       clamp(2.4rem, 5vw, 4rem);
+  --t-h2:       clamp(1.8rem, 3.4vw, 2.8rem);
+  --t-h3:       1.5rem;
+  --t-corpo-lg: 1.25rem;
+  --t-corpo:    1.0625rem;
+  --t-pequeno:  0.9375rem;
+  --t-label:    0.8125rem;   /* eyebrows em mono, caixa-alta */
+
+  --peso-display: 800;
+  --tracking-label: 0.22em;
+
+  /* ---- Raio / espaçamento / sombra ---- */
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 14px;
+  --raio-pill: 999px;
+
+  --gap-xs: 8px;
+  --gap-sm: 16px;
+  --gap-md: 24px;
+  --gap-lg: 40px;
+  --gap-xl: 72px;
+  --gap-2xl: 120px;
+
+  --sombra-card: 0 18px 50px -20px rgba(0,0,0,0.8);
+  --borda-deco: 1px solid var(--linha-dourada);
+
+  --largura-conteudo: 1200px;
+}
+
+/* ---- Utilitários base (opcional) ---- */
+.eyebrow {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--dourado-sutil);
+}
+.titulo-display {
+  font-family: var(--fonte-display);
+  font-weight: var(--peso-display);
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
