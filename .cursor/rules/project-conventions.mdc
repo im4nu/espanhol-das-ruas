@@ -1,0 +1,43 @@
+---
+description: Convenções do projeto Vite + React + TypeScript — Espanhol das Ruas
+alwaysApply: true
+---
+
+# Convenções do Projeto
+
+## Stack
+
+- Vite 6 + React 19 + TypeScript
+- Tailwind CSS v4 via `@tailwindcss/vite`
+- Estilos globais e componentes CSS em `src/index.css`
+
+## Estrutura
+
+```
+src/
+  App.tsx                 # Entry da aplicação (splash + seções)
+  main.tsx
+  index.css               # Tokens + @layer components
+  lib/constants.ts        # Constantes globais (ex: DISCORD_INVITE_URL)
+  components/             # Seções da landing (Nav, Hero, Footer…)
+  components/ui/          # Componentes reutilizáveis (Button, Logo…)
+public/assets/            # SVGs estáticos (simbolo.svg, skyline.svg)
+docs/                     # design-system.md, landing.md
+```
+
+## Padrões de código
+
+- Componentes de seção em `src/components/` — um arquivo por seção
+- UI reutilizável em `src/components/ui/`
+- Links externos do Discord via `DISCORD_INVITE_URL` de `src/lib/constants.ts`
+- Não adicionar CSS solto na raiz do projeto — usar `src/index.css`
+- Não recriar protótipos HTML/JSX legados na raiz
+
+## Documentação
+
+- Design system: `docs/design-system.md`
+- Estrutura da landing: `docs/landing.md`
+
+## Idioma
+
+Responder e documentar em português.

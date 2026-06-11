@@ -1,0 +1,52 @@
+---
+description: Design system Espanhol das Ruas — paleta, tipografia, componentes e assets
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# Design System — Espanhol das Ruas
+
+Consulte também `docs/design-system.md` para referência completa.
+
+## Identidade
+
+Art Déco noturno / urbano / noir. Promessa: **"De zero a hablante — do jeito que o espanhol é falado de verdade"**.
+
+## Tokens
+
+Fonte única: `src/index.css` (`@theme` + `:root`). Não criar `tokens.css` na raiz.
+
+Cores principais:
+- `--preto-asfalto` / `bg-preto-asfalto` — fundo
+- `--roxo-noturno` — ações e botões primários
+- `--vermelho-rubi` — acentos energia
+- `--dourado-sutil` — contornos e eyebrows
+- `--off-white` — texto principal
+
+## Tipografia
+
+- Display: Big Shoulders Display (`--fonte-display`)
+- Corpo: Archivo (`--fonte-corpo`)
+- Mono: Space Mono (`--fonte-mono`)
+
+**Proibido:** Inter, Roboto ou Arial como fonte de display.
+
+## Assets
+
+- Logo: `/assets/simbolo.svg`
+- Skyline: `/assets/skyline.svg`
+
+Não distorcer o logo. Não aplicar gradientes no arquivo SVG da marca.
+
+## Componentes
+
+Reutilizar antes de criar novos:
+- React: `Button`, `Eyebrow`, `Logo`, `Proof`, `Skyline` em `src/components/ui/`
+- CSS: `.btn`, `.eyebrow`, `.section-inner`, `.pillar-card`, `.testimonial-card`
+
+## Regras de UI
+
+- Fundos sólidos nas superfícies — sem gradientes decorativos na marca
+- Hover de botões: `0.18s ease`
+- Seções: `padding: clamp(60px, 8vw, 120px) 5%`
+- Conteúdo interno: `.section-inner` (max 1200px)
