@@ -1,7 +1,5 @@
 import { Logo } from './ui/Logo'
-import { Button } from './ui/Button'
 import { Skyline } from './ui/Skyline'
-import { DISCORD_INVITE_URL } from '../lib/constants'
 
 const footerLinks = [
   { href: '#como', label: 'Como funciona' },
@@ -16,13 +14,13 @@ export function Footer() {
       id="footer"
       className="relative overflow-hidden border-t border-linha-dourada bg-preto-asfalto px-[5%] py-[clamp(60px,8vw,120px)]"
     >
-      <div className="section-inner relative z-[1] grid grid-cols-1 items-start gap-12 text-center md:grid-cols-3 md:text-left">
+      <div className="section-inner relative z-[1] grid grid-cols-1 items-start gap-12 text-center md:grid-cols-2 md:text-left">
         <div className="flex flex-col items-center md:items-start">
           <Logo />
         </div>
 
-        <nav aria-label="Links do rodapé">
-          <ul className="m-0 flex list-none flex-col gap-3 p-0">
+        <nav aria-label="Links do rodapé" className="md:justify-self-end">
+          <ul className="m-0 flex list-none flex-col gap-3 p-0 md:items-end">
             {footerLinks.map(({ href, label }) => (
               <li key={label}>
                 <a
@@ -35,17 +33,6 @@ export function Footer() {
             ))}
           </ul>
         </nav>
-
-        <div className="flex flex-col items-center gap-4 md:items-end">
-          <Button
-            href={DISCORD_INVITE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full max-w-[320px] md:w-auto"
-          >
-            Entrar na comunidade
-          </Button>
-        </div>
       </div>
 
       <p

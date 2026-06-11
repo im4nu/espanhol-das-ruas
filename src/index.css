@@ -191,10 +191,16 @@
     text-transform: uppercase;
   }
 
+  .eor-proof {
+    position: relative;
+    z-index: 1;
+  }
+
   .eor-dots {
     position: relative;
     width: 118px;
     height: 30px;
+    flex-shrink: 0;
   }
 
   .eor-dot {
